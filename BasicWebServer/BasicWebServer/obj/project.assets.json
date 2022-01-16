@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "BasicWebServer.Serverr/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BasicWebServer.Serverr.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicWebServer.Serverr.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BasicWebServer.Serverr/1.0.0": {
+      "type": "project",
+      "path": "../BasicWebServer.Serverr/BasicWebServer.Serverr.csproj",
+      "msbuildProject": "../BasicWebServer.Serverr/BasicWebServer.Serverr.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "BasicWebServer.Serverr >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\zvezdi\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\zvezdi\\Desktop\\C#Web_Tasks\\BasicWebServer\\BasicWebServer\\BasicWebServer.Demo.csproj",
+      "projectName": "BasicWebServer.Demo",
+      "projectPath": "C:\\Users\\zvezdi\\Desktop\\C#Web_Tasks\\BasicWebServer\\BasicWebServer\\BasicWebServer.Demo.csproj",
+      "packagesPath": "C:\\Users\\zvezdi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\zvezdi\\Desktop\\C#Web_Tasks\\BasicWebServer\\BasicWebServer\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\zvezdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "C:\\Users\\zvezdi\\Desktop\\C#Web_Tasks\\BasicWebServer\\BasicWebServer.Serverr\\BasicWebServer.Serverr.csproj": {
+              "projectPath": "C:\\Users\\zvezdi\\Desktop\\C#Web_Tasks\\BasicWebServer\\BasicWebServer.Serverr\\BasicWebServer.Serverr.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\BasicWebServer.exe
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\BasicWebServer.deps.json
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\BasicWebServer.runtimeconfig.json
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\BasicWebServer.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\ref\BasicWebServer.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\BasicWebServer.pdb
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.csproj.AssemblyReference.cache
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.AssemblyInfoInputs.cache
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.AssemblyInfo.cs
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.csproj.CoreCompileInputs.cache
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\ref\BasicWebServer.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.pdb
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.genruntimeconfig.cache

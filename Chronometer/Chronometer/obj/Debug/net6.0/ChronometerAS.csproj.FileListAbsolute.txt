@@ -1,0 +1,15 @@
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.csproj.AssemblyReference.cache
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.AssemblyInfoInputs.cache
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.AssemblyInfo.cs
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.csproj.CoreCompileInputs.cache
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\bin\Debug\net6.0\ChronometerAS.exe
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\bin\Debug\net6.0\ChronometerAS.deps.json
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\bin\Debug\net6.0\ChronometerAS.runtimeconfig.json
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\bin\Debug\net6.0\ChronometerAS.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\bin\Debug\net6.0\ref\ChronometerAS.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\bin\Debug\net6.0\ChronometerAS.pdb
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ref\ChronometerAS.dll
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.pdb
+C:\Users\zvezdi\Desktop\C#Web_Tasks\Chronometer\Chronometer\obj\Debug\net6.0\ChronometerAS.genruntimeconfig.cache
