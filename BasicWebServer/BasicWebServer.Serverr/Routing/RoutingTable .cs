@@ -16,10 +16,10 @@ namespace BasicWebServer.Serverr.Routing
             => this.routes = new Dictionary<Method, Dictionary<string, Response>>()
             {
 
-                [Method.Get] = new Dictionary<string, Response>(),
-                [Method.Post] = new Dictionary<string, Response>(),
-                [Method.Put] = new Dictionary<string, Response>(),
-                [Method.Delete] = new Dictionary<string, Response>(),
+                [Method.Get] = new Dictionary<string, Response>(StringComparer.InvariantCultureIgnoreCase),
+                [Method.Post] = new Dictionary<string, Response>(StringComparer.InvariantCultureIgnoreCase),
+                [Method.Put] = new Dictionary<string, Response>(StringComparer.InvariantCultureIgnoreCase),
+                [Method.Delete] = new Dictionary<string, Response>(StringComparer.InvariantCultureIgnoreCase),
             };
 
         public IRoutingTable Map(string url, Method method, Response response)

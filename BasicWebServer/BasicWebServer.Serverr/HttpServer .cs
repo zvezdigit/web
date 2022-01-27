@@ -21,6 +21,7 @@ namespace BasicWebServer.Serverr
         public HttpServer(string _ipAddress, int _port, Action<RoutingTable> routingTableConfiguration)
         {
             ipAddress = IPAddress.Parse(_ipAddress);
+
             port = _port;
 
             serverListener = new TcpListener(ipAddress, port);
