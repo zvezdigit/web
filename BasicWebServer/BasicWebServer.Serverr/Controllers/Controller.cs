@@ -1,0 +1,43 @@
+﻿using BasicWebServer.Serverr.HTTP;
+using BasicWebServer.Serverr.Responses;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BasicWebServer.Serverr.Controllers
+{
+    public class Controller
+    {
+        public Controller(Request request)
+        {
+            this.Request = request;
+        }
+
+        protected  Request Request { get; private init; }
+
+        protected Response Text(string text) => new TextResponse(text);
+        protected Response Html(string html, CookieCollection cookies=null)
+        {
+            var response = new HtmlResponse(html);
+
+
+            if (cookies!=null)
+            {
+                foreach (var cookie in cookies)
+                {
+                    response.Cookies.Add(cookie.Name, cookie.Value);
+                }
+            }
+
+            return response;
+        }
+        protected Response BadRequest() => new BadRequestResponse();
+        protected Response Unauthorized() => new UnAuthorizedResponse();
+        protected Response NotFound() => new NotFoundResponse();
+        protected Response Redirect(string location) => new RedirectResponse(location);
+        protected Response File(string fileName) => new TextFileResponse(fileName);
+
+    }
+}
