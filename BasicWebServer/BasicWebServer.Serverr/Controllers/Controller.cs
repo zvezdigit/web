@@ -1,8 +1,10 @@
-﻿using BasicWebServer.Serverr.HTTP;
+﻿using BasicWebServer.Demo.Views;
+using BasicWebServer.Serverr.HTTP;
 using BasicWebServer.Serverr.Responses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,6 +35,18 @@ namespace BasicWebServer.Serverr.Controllers
 
             return response;
         }
+
+        protected Response View([CallerMemberName] string viewName = "")
+        {
+            return new ViewResponse(viewName, this.GetControllerName());
+        }
+
+        private string GetControllerName()
+        {
+            return this.GetType().Name
+                .Replace(nameof(Controller), string.Empty);
+        }
+
         protected Response BadRequest() => new BadRequestResponse();
         protected Response Unauthorized() => new UnAuthorizedResponse();
         protected Response NotFound() => new NotFoundResponse();

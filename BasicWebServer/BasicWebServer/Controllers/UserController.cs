@@ -12,14 +12,9 @@ namespace BasicWebServer.Demo.Controllers
 
         }
 
-        private const string LoginForm = @"<form action='/LogIn' method='POST'>
-        Username: <input type='text' name='Username'/>
-        Password: <input type='text' name='Password'/>
-        <input type='submit' value ='Log In' /> 
-        </form>";
         public Response Login()
         {
-            return Html(LoginForm);
+            return View();
         }
 
 

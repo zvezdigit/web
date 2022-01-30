@@ -16,3 +16,7 @@ C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6
 C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\ref\BasicWebServer.Demo.dll
 C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.Demo.pdb
 C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\obj\Debug\net6.0\BasicWebServer.Demo.genruntimeconfig.cache
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Views\Home\Content.cshtml
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Views\Home\Html.cshtml
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Views\User\Login.cshtml
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Controllers\HomeController.cs
