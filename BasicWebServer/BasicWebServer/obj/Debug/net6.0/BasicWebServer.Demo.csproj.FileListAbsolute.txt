@@ -20,3 +20,4 @@ C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6
 C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Views\Home\Html.cshtml
 C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Views\User\Login.cshtml
 C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Controllers\HomeController.cs
+C:\Users\zvezdi\Desktop\C#Web_Tasks\BasicWebServer\BasicWebServer\bin\Debug\net6.0\Views\Home\HtmlFormPost.cshtml

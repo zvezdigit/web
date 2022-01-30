@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BasicWebServer.Serverr.Controllers
 {
-    public class Controller
+    public abstract class Controller
     {
         public Controller(Request request)
         {
@@ -39,6 +39,11 @@ namespace BasicWebServer.Serverr.Controllers
         protected Response View([CallerMemberName] string viewName = "")
         {
             return new ViewResponse(viewName, this.GetControllerName());
+        }
+
+        protected Response View(object model, [CallerMemberName] string viewName = "")
+        {
+            return new ViewResponse(viewName, this.GetControllerName(), model);
         }
 
         private string GetControllerName()
