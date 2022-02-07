@@ -172,12 +172,9 @@ namespace BasicWebServer.Serverr.HTTP
             Dictionary<string, string> query = new Dictionary<string, string>();
             var parts = queryString.Split("?", 2);
 
-            if (parts.Length == 1)
+            if (parts.Length > 1)
             {
-                url = parts[0];
-            }
-            else
-            {
+
                 var queryParams = parts[1].Split("&");
 
                 foreach (var pair in queryParams)
@@ -190,6 +187,8 @@ namespace BasicWebServer.Serverr.HTTP
                     }
                 }
             }
+
+            url = parts[0];
 
             return (url, query);
         }

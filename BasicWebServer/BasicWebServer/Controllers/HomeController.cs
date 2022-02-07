@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using BasicWebServer.Demo.Models;
+using BasicWebServer.Serverr.HTTP.Attributes;
 
 namespace BasicWebServer.Demo.Controllers
 {
@@ -58,6 +59,7 @@ namespace BasicWebServer.Demo.Controllers
         public Response Index()
             => Text("Hello from the server!");
 
+        public Response Student(string name, int age) => Text($"I'm {name} and I'm {age} years old");
         public Response Redirect()
         {
             return Redirect("https://softuni.org/");
@@ -68,6 +70,7 @@ namespace BasicWebServer.Demo.Controllers
             return View();
         }
 
+        [HttpPost]
         public Response HtmlFormPost()
         {
            var name = this.Request.Form["Name"];
