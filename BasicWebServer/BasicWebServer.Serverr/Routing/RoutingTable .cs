@@ -33,6 +33,7 @@ namespace BasicWebServer.Serverr.Routing
             Guard.AgainstNull(path, nameof(path));
             Guard.AgainstNull(responseFunction, nameof(responseFunction));
 
+
             switch (method)
             {
                 case Method.Get: 
@@ -53,6 +54,7 @@ namespace BasicWebServer.Serverr.Routing
         {
             Guard.AgainstNull(path, nameof(path));
             Guard.AgainstNull(responseFunction, nameof(responseFunction));
+            Guard.AgainstDuplicatedKey(routes[Method.Get], path, "RoutingTable.Get");
 
             this.routes[Method.Get][path] = responseFunction;
 
@@ -63,6 +65,7 @@ namespace BasicWebServer.Serverr.Routing
         {
             Guard.AgainstNull(path, nameof(path));
             Guard.AgainstNull(responseFunction, nameof(responseFunction));
+            Guard.AgainstDuplicatedKey(routes[Method.Post], path, "RoutingTable.Post");
 
             this.routes[Method.Post][path] = responseFunction;
 
