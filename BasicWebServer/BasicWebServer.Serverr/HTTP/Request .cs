@@ -27,6 +27,8 @@ namespace BasicWebServer.Serverr.HTTP
 
         public IReadOnlyDictionary<string, string> Form { get; private set; }
 
+        public IReadOnlyDictionary<string, string> Query { get; private set; }
+
         public static IServiceCollection ServiceCollection { get; private set; }
         public static Request Parse(string request, IServiceCollection serviceCollection)
         {
@@ -38,7 +40,7 @@ namespace BasicWebServer.Serverr.HTTP
 
             var method = ParseMethod(startLine[0]);
 
-            var url = startLine[1];
+            (string url, Dictionary<string, string> query) = ParseUrl(startLine[1]);
 
             var headers = ParseHeaders(lines.Skip(1));
 
@@ -59,7 +61,8 @@ namespace BasicWebServer.Serverr.HTTP
                 Cookies= cookies,
                 Session = session,
                 Body = body,
-                Form=form
+                Form=form,
+                Query = query
             };
 
         }
@@ -162,5 +165,34 @@ namespace BasicWebServer.Serverr.HTTP
                 throw new InvalidOperationException($"Method {method} is not supported");
             }
         }
+
+        private static (string url, Dictionary<string, string> query) ParseUrl(string queryString)
+        {
+            string url = String.Empty;
+            Dictionary<string, string> query = new Dictionary<string, string>();
+            var parts = queryString.Split("?", 2);
+
+            if (parts.Length == 1)
+            {
+                url = parts[0];
+            }
+            else
+            {
+                var queryParams = parts[1].Split("&");
+
+                foreach (var pair in queryParams)
+                {
+                    var param = pair.Split('=');
+
+                    if (param.Length == 2)
+                    {
+                        query.Add(param[0], param[1]);
+                    }
+                }
+            }
+
+            return (url, query);
+        }
+
     }
 }
