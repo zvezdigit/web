@@ -1,6 +1,6 @@
 ﻿using BasicWebServer.Serverr.Controllers;
 using BasicWebServer.Serverr.HTTP;
-
+using BasicWebServer.Serverr.HTTP.Attributes;
 
 namespace BasicWebServer.Demo.Controllers
 {
@@ -12,6 +12,7 @@ namespace BasicWebServer.Demo.Controllers
 
         }
 
+        [HttpPost]
         public Response Login()
         {
             return View();
@@ -31,7 +32,8 @@ namespace BasicWebServer.Demo.Controllers
             {
                 if (!this.Request.Session.ContainsKey(Session.SessionUserKey))
                 {
-                    Request.Session[Session.SessionUserKey] = "MyUserId";
+                    SignIn(Guid.NewGuid().ToString());
+
 
                     var cookies = new CookieCollection();
                     cookies.Add(Session.SessionCookieName, Request.Session.Id);
@@ -44,20 +46,17 @@ namespace BasicWebServer.Demo.Controllers
             return Redirect("/Login");
         }
 
-        public Response LogOut()
+        public Response Logout()
         {
-            this.Request.Session.Clear();
+            SignOut();
 
             return Html("<h3> Logged out successfully!</h3>");
         }
 
+        [Authorize]
         public Response GetUserData()
         {
-            if (Request.Session.ContainsKey(Session.SessionUserKey))
-            {
-              return Html( $"<h3>Currently logged - in user " + $"is with username '{UserController.Username}'</h3>");
-            }
-            return Redirect("/LogIn");
+            return Html($"<h3>Currently logged-in user is with id '{User.Id}'</h3>");
         }
 
     }

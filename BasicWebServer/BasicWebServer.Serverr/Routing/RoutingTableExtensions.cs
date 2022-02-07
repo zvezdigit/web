@@ -88,6 +88,11 @@ namespace BasicWebServer.Serverr.Routing
         {
             return request =>
             {
+                if (!UserIsAuthorized(controllerAction, request.Session))
+                {
+                    return new Response(StatusCode.Unauthorized);
+                }
+
                 var controllerInstance = CreateController(controllerAction.DeclaringType, request);
                 var parameterValues = GetParameterValues(controllerAction, request);
 
@@ -154,6 +159,30 @@ namespace BasicWebServer.Serverr.Routing
         private static string GetValue(this Request request, string name)
             => request.Query.GetValueOrDefault(name) ??
             request.Form.GetValueOrDefault(name);
+
+        private static bool UserIsAuthorized(
+          MethodInfo controllerAction,
+          Session session)
+        {
+            var authorizationRequired = controllerAction
+                .DeclaringType
+                .GetCustomAttribute<AuthorizeAttribute>()
+                ?? controllerAction
+                .GetCustomAttribute<AuthorizeAttribute>();
+
+            if (authorizationRequired != null)
+            {
+                var userIsAuthorized = session.ContainsKey(Session.SessionUserKey)
+                    && session[Session.SessionUserKey] != null;
+
+                if (!userIsAuthorized)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
 
         private static void MapDefaultRoutes(
            IRoutingTable routingTable,

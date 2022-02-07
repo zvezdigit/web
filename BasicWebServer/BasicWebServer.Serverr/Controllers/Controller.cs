@@ -1,5 +1,6 @@
 ﻿using BasicWebServer.Demo.Views;
 using BasicWebServer.Serverr.HTTP;
+using BasicWebServer.Serverr.Identity;
 using BasicWebServer.Serverr.Responses;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ namespace BasicWebServer.Serverr.Controllers
         }
 
         protected  Request Request { get; set; }
+
+        private UserIdentity userIdentity;
 
         protected Response Text(string text) => new TextResponse(text);
         protected Response Html(string html, CookieCollection cookies=null)
@@ -50,6 +53,33 @@ namespace BasicWebServer.Serverr.Controllers
         {
             return this.GetType().Name
                 .Replace(nameof(Controller), string.Empty);
+        }
+
+        protected UserIdentity User
+        {
+            get
+            {
+                if (this.userIdentity == null)
+                {
+                    this.userIdentity = this.Request.Session.ContainsKey(Session.SessionUserKey)
+                        ? new UserIdentity { Id = this.Request.Session[Session.SessionUserKey] }
+                        : new();
+                }
+
+                return this.userIdentity;
+            }
+        }
+
+        protected void SignIn(string userId)
+        {
+            this.Request.Session[Session.SessionUserKey] = userId;
+            this.userIdentity = new UserIdentity { Id = userId };
+        }
+
+        protected void SignOut()
+        {
+            this.Request.Session.Clear();
+            this.userIdentity = new();
         }
 
         protected Response BadRequest() => new BadRequestResponse();

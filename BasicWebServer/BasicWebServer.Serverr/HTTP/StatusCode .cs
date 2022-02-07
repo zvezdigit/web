@@ -12,6 +12,7 @@ namespace BasicWebServer.Serverr.HTTP
         Found=302,
         BadRequest=400,
         UnAuthorized = 401,
-        NotFound=404
+        NotFound=404,
+        Unauthorized = 405
     }
 }
